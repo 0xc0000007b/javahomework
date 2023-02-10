@@ -36,15 +36,22 @@ public class SeminarOne {
         int[][] arr = new int[rows][cols];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                arr[0][0] = r.nextInt(1,10);
-                arr[1][1] = r.nextInt(1,10);
-                arr[2][2] = r.nextInt(1,10);
-                arr[2][0] = r.nextInt(1,10);
-                arr[0][2] = r.nextInt(1,10);
-
+                arr[i][j] = r.nextInt(1,10);
+                System.out.print(arr[i][j] + "\t");
             }
+            System.out.println();
         }
-        return arr;
+        int maxInd = arr.length -1;
+        System.out.println("Главная: ");
+        for (int i = maxInd; i >= 0; i--) {
+            System.out.printf(  arr[i][i] + " ");
+        }
+        System.out.println();
+
+        System.out.println("Побочная: ");
+        for (int i = maxInd; i >= 0; i--) {
+            System.out.printf( +  arr[i][maxInd - i] + " ");
+        }
     }
     public static void printArray(int[][] array){
         for (int i = 0; i < array.length; i++) {
