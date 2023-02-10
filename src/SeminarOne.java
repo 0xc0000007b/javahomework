@@ -101,5 +101,14 @@ public class SeminarOne {
         }
         System.out.println(prefix);;
     }
-
+    public void indexMultiplyByTwo(int size){
+        int[] arr = new int[size];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(1,10);
+            System.out.print( arr[i] + " ");
+            if (arr[i] < 6) arr[i] *= 2;
+        }
+        System.out.println();
+        System.out.println(Arrays.toString(arr));
+    }
 }
