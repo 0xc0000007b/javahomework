@@ -1,4 +1,5 @@
 import java.io.Console;
+import java.io.IOException;
 import java.util.*;
 
 
@@ -7,8 +8,9 @@ public class Main {
 
     static Scanner sc = new Scanner(System.in);
     static SeminarOne semOne = new SeminarOne();
+    static SeminarTwo semTwo = new SeminarTwo();
 
-        public static void main(String[] args) {
+        public static void main(String[] args) throws IOException {
 //            semOne.checkSum(sc.nextInt(),sc.nextInt());
 //            semOne.printString(sc.nextInt(), sc.nextLine());
 //            semOne.checkYear(sc.nextInt());
@@ -24,7 +26,8 @@ public class Main {
 //            semOne.replaceIndex(new int[] {1,1,1,0,1,1});
             String[] array = {"asd", "asdaaa","asdadaw"};
             semOne.findPrefix(array);
-
+            semTwo.palindromeCheck("kmjhhfg");
+            semTwo.writeToFile("TEST", 100);
         }
 
 
