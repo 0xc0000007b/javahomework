@@ -1,5 +1,4 @@
 import java.io.Console;
-import java.io.IOException;
 import java.util.*;
 
 
@@ -8,8 +7,8 @@ public class Main {
 
     static Scanner sc = new Scanner(System.in);
     static SeminarOne semOne = new SeminarOne();
-    static SeminarTwo semTwo = new SeminarTwo();
-        public static void main(String[] args) throws IOException {
+
+        public static void main(String[] args) {
 //            semOne.checkSum(sc.nextInt(),sc.nextInt());
 //            semOne.printString(sc.nextInt(), sc.nextLine());
 //            semOne.checkYear(sc.nextInt());
@@ -17,17 +16,15 @@ public class Main {
 //              var arr = semOne.createArray(sc.nextInt(), sc.nextInt());
 //            System.out.println(Arrays.toString(arr));
 //            semOne.checkPositive(sc.nextInt());
-//             semOne.findDiagonals(3,3);
-
-//            var arra = semOne.arrayCreation(sc.nextInt());
-//            System.out.println(Arrays.toString(arra));
-//            semOne.findMaxAndMin(arra);
+//            var arr2D = semOne.create2DArray(3,3);
+//            semOne.printArray(arr2D);
+//            var arr = semOne.arrayCreation(sc.nextInt());
+//            System.out.println(Arrays.toString(arr));
+//            semOne.findMaxAndMin(arr);
 //            semOne.replaceIndex(new int[] {1,1,1,0,1,1});
-//            String[] array = {"asd", "asdaaa","asdadaw"};
-//            semOne.findPrefix(array);
-           // semOne.indexMultiplyByTwo(10);
-            semTwo.writeToFile("TEST", 100);
-            semTwo.palindromeCheck("какое-то слово");
+            String[] array = {"asd", "asdaaa","asdadaw"};
+            semOne.findPrefix(array);
+
         }
 
 
