@@ -1,12 +1,16 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class SeminarOne {
     static Random r = new Random();
     public static void checkSum(int a, int b){
 
 
-        boolean isBetween = a + b == 20 ? true : false;
+        boolean isBetween = a + b >= 10 && a + b <= 10 ? true : false;
         System.out.println(isBetween);
     }
     public static void printString(int a, String b){
@@ -32,27 +36,27 @@ public class SeminarOne {
         System.out.printf("number %d is %b", val, isPositive);
     }
 
-    public static int[][] create2DArray(int cols, int rows){
+    public  void findDiagonals(int cols, int rows){
         int[][] arr = new int[rows][cols];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                arr[0][0] = r.nextInt(1,10);
-                arr[1][1] = r.nextInt(1,10);
-                arr[2][2] = r.nextInt(1,10);
-                arr[2][0] = r.nextInt(1,10);
-                arr[0][2] = r.nextInt(1,10);
-
-            }
-        }
-        return arr;
-    }
-    public static void printArray(int[][] array){
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                System.out.print(array[i][j] + "\t");
+                arr[i][j] = r.nextInt(1,10);
+                System.out.print(arr[i][j] + "\t");
             }
             System.out.println();
         }
+        int maxInd = arr.length -1;
+        System.out.println("Главная: ");
+        for (int i = maxInd; i >= 0; i--) {
+            System.out.printf(  arr[i][i] + " ");
+        }
+        System.out.println();
+
+        System.out.println("Побочная: ");
+        for (int i = maxInd; i >= 0; i--) {
+            System.out.printf( +  arr[i][maxInd - i] + " ");
+        }
+
     }
 
     public static void findMaxAndMin(int[] array){
@@ -89,10 +93,21 @@ public class SeminarOne {
             while (str.indexOf(prefix) != 0){
 
             prefix = prefix.substring(0, prefix.length() -1);
-            if (prefix.isBlank()) System.out.println("");;
+            if (prefix.isBlank()) System.out.println("");
             }
         }
-        System.out.println(prefix);;
+        System.out.println(prefix);
+    }
+
+    public void indexMultiplyByTwo(int size){
+        int[] arr = new int[size];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(1,10);
+            System.out.print( arr[i] + " ");
+            if (arr[i] < 6) arr[i] *= 2;
+        }
+        System.out.println();
+        System.out.println(Arrays.toString(arr));
     }
 
 }
