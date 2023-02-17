@@ -9,6 +9,7 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
     static SeminarOne semOne = new SeminarOne();
     static SeminarTwo semTwo = new SeminarTwo();
+    static SeminarThree semThree = new SeminarThree();
 
         public static void main(String[] args) throws IOException {
 //            semOne.checkSum(sc.nextInt(),sc.nextInt());
@@ -24,10 +25,11 @@ public class Main {
 //            System.out.println(Arrays.toString(arr));
 //            semOne.findMaxAndMin(arr);
 //            semOne.replaceIndex(new int[] {1,1,1,0,1,1});
-            String[] array = {"asd", "asdaaa","asdadaw"};
-            semOne.findPrefix(array);
-            semTwo.palindromeCheck("kmjhhfg");
-            semTwo.writeToFile("TEST", 100);
+//            String[] array = {"asd", "asdaaa","asdadaw"};
+//            semOne.findPrefix(array);
+//            semTwo.palindromeCheck("kmjhhfg");
+//            semTwo.writeToFile("TEST", 100);
+            semThree.findMinimalInArray();
         }
 
 
