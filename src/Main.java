@@ -1,6 +1,5 @@
-import java.io.Console;
 import java.io.IOException;
-import java.util.*;
+import java.util.Scanner;
 
 
 public class Main {
@@ -10,6 +9,7 @@ public class Main {
     static SeminarOne semOne = new SeminarOne();
     static SeminarTwo semTwo = new SeminarTwo();
     static SeminarThree semThree = new SeminarThree();
+    static Seminar4 semFour = new Seminar4();
 
         public static void main(String[] args) throws IOException {
 //            semOne.checkSum(sc.nextInt(),sc.nextInt());
@@ -29,7 +29,8 @@ public class Main {
 //            semOne.findPrefix(array);
 //            semTwo.palindromeCheck("kmjhhfg");
 //            semTwo.writeToFile("TEST", 100);
-            semThree.findMinimalInArray();
+//            semThree.findMinimalInArray();
+              semFour.pushElementByIndex();
         }
 
 

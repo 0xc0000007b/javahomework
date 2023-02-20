@@ -1,7 +1,10 @@
 import java.util.*;
 
+
+
 public class SeminarThree {
     static Random random = new Random();
+
     public  void removeAllEvens(){
         ArrayList<Integer> inst = new ArrayList<Integer>(20);
 
